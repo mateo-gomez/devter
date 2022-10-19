@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Button from "../components/Button";
-import GitHub from "../components/Icons/GitHub";
-import Layout from "../components/Layout";
-import { colors } from "../styles/theme";
+import Button from "components/Button";
+import GitHub from "components/Icons/GitHub";
+import Layout from "components/Layout";
+import { colors } from "styles/theme";
 
 import { loginWithGitHub, onGitHubAuthStateChanged } from "../firebase/client";
 
