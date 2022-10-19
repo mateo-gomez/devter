@@ -1,3 +1,5 @@
+import { generateSpacings } from "./utils";
+
 export const breakpoints = {
   mobile: "520px",
 };
@@ -14,3 +16,10 @@ export const colors = {
   primary: "#0099ff",
   secondary: "#1c5480",
 };
+
+export const shape = {
+  radius: "4px",
+  rounded: "50px",
+};
+
+export const spacing = generateSpacings();
