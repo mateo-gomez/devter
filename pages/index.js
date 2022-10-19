@@ -1,11 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import GitHub from "../components/Icons/GitHub";
 import Layout from "../components/Layout";
 import { colors } from "../styles/theme";
 
+import { loginWithGitHub, onGitHubAuthStateChanged } from "../firebase/client";
+
 export default function Home() {
+  const [user, setUser] = useState(undefined);
+
+  useEffect(() => {
+    onGitHubAuthStateChanged(setUser);
+  }, []);
+
+  const handleClick = () => {
+    loginWithGitHub();
+  };
+
   return (
     <div>
       <Head>
@@ -21,10 +34,12 @@ export default function Home() {
             Talk about development <br /> with developers
           </h2>
           <div>
-            <Button>
-              <GitHub width={24} height={24} fill={colors.white} />
-              Login with GitHub
-            </Button>
+            {user === null && (
+              <Button onClick={handleClick}>
+                <GitHub width={24} height={24} fill={colors.white} />
+                Login with GitHub
+              </Button>
+            )}
           </div>
         </section>
       </Layout>
