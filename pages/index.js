@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Avatar from "components/Avatar";
 import Button from "components/Button";
 import GitHub from "components/Icons/GitHub";
 import Layout from "components/Layout";
@@ -39,6 +40,18 @@ export default function Home() {
                 <GitHub width={24} height={24} fill={colors.white} />
                 Login with GitHub
               </Button>
+            )}
+
+            {Boolean(user) && (
+              <div>
+                <Avatar
+                  src={user.photoURL}
+                  alt={"avatar"}
+                  text={user.username}
+                  height={100}
+                  width={100}
+                />
+              </div>
             )}
           </div>
         </section>
