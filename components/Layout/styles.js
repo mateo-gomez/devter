@@ -36,6 +36,7 @@ export const globalStyles = css.global`
     background-size: 50px 50px;
     padding: 0;
     margin: 0;
+    font-size: 16px;
     font-family: ${fonts.base};
   }
 

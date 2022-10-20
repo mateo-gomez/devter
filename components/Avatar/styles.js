@@ -1,5 +1,5 @@
 import css from "styled-jsx/css";
-import { spacing } from "styles/theme";
+import { spacings } from "styles/theme";
 
 export default css`
   div {
@@ -8,6 +8,6 @@ export default css`
   }
 
   strong {
-    margin-left: ${spacing.$2};
+    margin-left: ${spacings.$2};
   }
 `;

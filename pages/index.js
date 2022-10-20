@@ -5,7 +5,7 @@ import Avatar from "components/Avatar";
 import Button from "components/Button";
 import GitHub from "components/Icons/GitHub";
 import Layout from "components/Layout";
-import { colors } from "styles/theme";
+import { colors, fontSizes } from "styles/theme";
 
 import { loginWithGitHub, onGitHubAuthStateChanged } from "../firebase/client";
 
@@ -72,12 +72,13 @@ export default function Home() {
         h1 {
           color: ${colors.primary};
           font-weight: 800;
+          font-size: ${fontSizes.$4};
           margin-bottom: 16px;
         }
 
         h2 {
           color: ${colors.secondary};
-          font-size: 21px;
+          font-size: ${fontSizes.$2};
           margin: 0;
         }
       `}</style>
