@@ -8,6 +8,7 @@ import Layout from "components/Layout";
 import { colors, fontSizes } from "styles/theme";
 
 import { loginWithGitHub, onGitHubAuthStateChanged } from "../firebase/client";
+import Logo from "components/Icons/Logo";
 
 export default function Home() {
   const [user, setUser] = useState(undefined);
@@ -29,7 +30,7 @@ export default function Home() {
 
       <Layout>
         <section>
-          <Image src="/devter-logo.png" alt="Logo" width={120} height={120} />
+          <Logo fill={colors.primary} width={120} height={120} />
           <h1>Devter</h1>
           <h2>
             Talk about development <br /> with developers
