@@ -48,8 +48,6 @@ export default function Home() {
                   src={user.photoURL}
                   alt={"avatar"}
                   text={user.username}
-                  height={100}
-                  width={100}
                 />
               </div>
             )}

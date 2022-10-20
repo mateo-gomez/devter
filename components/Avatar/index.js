@@ -2,7 +2,7 @@ import Image from "next/image";
 import { shape } from "styles/theme";
 import styles from "./styles";
 
-export default function Avatar({ src, text, alt, height = 100, width = 100 }) {
+export default function Avatar({ src, text, alt, height = 50, width = 50 }) {
   return (
     <div>
       <Image
